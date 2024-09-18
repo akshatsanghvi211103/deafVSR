@@ -1,10 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Deaf-VSR</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #333;
+      padding: 10px 20px;
+    }
+
+    ul {
+      padding: 20px;
+      list-style-type: none;
+    }
+
+    ul li {
+      padding: 10px;
+      font-size: 18px;
+      color: #555;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* 5 videos per row */
+      gap: 20px;
+      padding: 20px;
+    }
+
+    video {
+      width: 100%;
+      border: 2px solid #4CAF50;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #4CAF50;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
+
   <h1>This is the page of the dataset DeafYouTube, part of the paper - "DeafVSR: Personalizing Lip Reading for Deaf Speakers"</h1>
+
   <h2>What to display?</h2>
   <ul>
     <li>Samples from the data and youtube channels</li>
@@ -12,6 +73,57 @@
     <li>Cases / Videos working for personalization but not for raw, maybe show a word distribution</li>
     <li>Ablation studies of the amount of data, and the other layers like decoders and other stuff</li>
     <li>Limitations and failure cases</li>
+  </ul>
+
+  <div class="video-grid">
+    <!-- Row 1 -->
+    <video controls>
+      <source src="media/benny.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video controls>
+      <source src="media/cochlear.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video controls>
+      <source src="media/deafdaydreamer.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video controls>
+      <source src="media/mia_sandra.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video controls>
+      <source src="media/realdeafdreamer.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+    <!-- Row 2 -->
+    <video controls>
+      <source src="media/benny.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video controls>
+      <source src="media/cochlear.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video controls>
+      <source src="media/deafdaydreamer.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video controls>
+      <source src="media/mia_sandra.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video controls>
+      <source src="media/realdeafdreamer.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <footer>
+    © 2024 Deaf-VSR Project
+  </footer>
+
 </body>
 </html>
-
