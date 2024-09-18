@@ -7,14 +7,14 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
+      background-color: #f0f8ff; /* Light blue background */
       color: #333;
       margin: 0;
       padding: 0;
     }
 
     h1 {
-      background-color: #4CAF50;
+      background-color: #1E90FF; /* Dodger Blue */
       color: white;
       text-align: center;
       padding: 20px;
@@ -37,24 +37,59 @@
       border-bottom: 1px solid #ccc;
     }
 
+    .abstract {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 10px 50px; /* Reduced padding */
+      background-color: #fff;
+      border: 1px solid #ccc;
+      margin: 20px auto; /* Reduced margin */
+      width: 70%; /* Make sure it's not too wide */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-family: 'Georgia', serif; /* Good-looking font */
+      font-size: 20px; /* Slightly larger font for emphasis */
+      line-height: 1.6; /* Better readability */
+    }
+
+    .abstract h2 {
+      margin-bottom: 10px; /* Reduced space between heading and text */
+    }
+
     .video-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr); /* 5 videos per row */
       gap: 20px;
       padding: 20px;
+      margin-bottom: 80px; /* Increased margin-bottom for space before the footer */
+    }
+
+    .video-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     video {
       width: 100%;
-      border: 2px solid #4CAF50;
+      border: 2px solid #1E90FF; /* Dodger Blue */
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 10px; /* Space below video */
+    }
+
+    .video-caption {
+      font-size: 16px;
+      color: #333;
+      text-align: center;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #4CAF50;
+      background-color: #1E90FF; /* Dodger Blue */
       color: white;
       position: fixed;
       bottom: 0;
@@ -64,61 +99,96 @@
 </head>
 <body>
 
-  <h1>This is the page of the dataset DeafYouTube, part of the paper - "DeafVSR: Personalizing Lip Reading for Deaf Speakers"</h1>
+  <h1>Presenting - "DeafVSR: Personalizing Lip Reading for Deaf Speakers"</h1>
 
   <h2>What to display?</h2>
   <ul>
-    <li>Samples from the data and youtube channels</li>
+    <li>Samples from the data and YouTube channels</li>
     <li>Annotation tool having the videos</li>
     <li>Cases / Videos working for personalization but not for raw, maybe show a word distribution</li>
     <li>Ablation studies of the amount of data, and the other layers like decoders and other stuff</li>
     <li>Limitations and failure cases</li>
   </ul>
 
+  <div class="abstract">
+    <h2>Abstract</h2>
+    <p>Automatic lip reading is considered to be one of the most important assistive technologies for the deaf community, but generic models often struggle to lip read due to the unique articulatory patterns of deaf speakers. This paper presents a personalized approach to address this challenge. We collect data from multiple deaf speakers and propose a method to adapt state-of-the-art lip reading models for individual users. Our approach employs layer-specific fine-tuning to identify the most effective parameters for speaker-specific learning, resulting in a parameter-efficient adaptation process. Experimental results show significant improvements in word error rates compared to generic models.</p>
+  </div>
+
   <div class="video-grid">
     <!-- Row 1 -->
-    <video controls>
-      <source src="media/benny.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <video controls>
-      <source src="media/cochlear.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <video controls>
-      <source src="media/deafdaydreamer.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <video controls>
-      <source src="media/mia_sandra.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <video controls>
-      <source src="media/realdeafdreamer.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <div class="video-item">
+      <video controls>
+        <source src="media/benny.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-caption">Speaker: Benny</div>
+    </div>
+    <div class="video-item">
+      <video controls>
+        <source src="media/cochlear.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-caption">Speaker: Cochlear</div>
+    </div>
+    <div class="video-item">
+      <video controls>
+        <source src="media/deafdaydreamer.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-caption">Speaker: DeafDayDreamer</div>
+    </div>
+    <div class="video-item">
+      <video controls>
+        <source src="media/mia_sandra.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-caption">Speaker: Mia Sandra</div>
+    </div>
+    <div class="video-item">
+      <video controls>
+        <source src="media/realdeafdreamer.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-caption">Speaker: RealDeafDreamer</div>
+    </div>
     
     <!-- Row 2 -->
-    <video controls>
-      <source src="media/benny.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <video controls>
-      <source src="media/cochlear.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <video controls>
-      <source src="media/deafdaydreamer.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <video controls>
-      <source src="media/mia_sandra.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <video controls>
-      <source src="media/realdeafdreamer.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <div class="video-item">
+      <video controls>
+        <source src="media/daniel_howell.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-caption">Speaker: Daniel Howell</div>
+    </div>
+    <div class="video-item">
+      <video controls>
+        <source src="media/emily_canham.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-caption">Speaker: Emily Canham</div>
+    </div>
+    <div class="video-item">
+      <video controls>
+        <source src="media/riyadh.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-caption">Speaker: Riyadh</div>
+    </div>
+    <div class="video-item">
+      <video controls>
+        <source src="media/jack.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-caption">Speaker: Jack</div>
+    </div>
+    <div class="video-item">
+      <video controls>
+        <source src="media/diane_jennings.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-caption">Speaker: Diane Jennings</div>
+    </div>
   </div>
 
   <footer>
