@@ -126,7 +126,7 @@
                 </span>
                 <!-- Video Link. -->
                 <span class="link-block">
-                  <a href=""
+                  <a href="https://www.youtube.com/watch?v=u2FXENwkaAI/"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -145,8 +145,7 @@
                 </span>
                 <!-- Dataset Link. -->
                 <span class="link-block">
-                  <a href=""
-                    class="external-link button is-normal is-rounded is-dark">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="far fa-images"></i>
                     </span>
@@ -306,17 +305,25 @@
             <img src="./static/images/annotation.jpeg" class="interpolation-image"
               alt="Interpolate start reference image."
               style="border: 2px solid #ccc; border-radius: 10px; padding: 10px;" />
-              <br>
-              <br>
-              <br>
-              During annotation, we are given a short video clip of the speaker, we start by carefully viewing the video and analyse the mouth movements. If we find errors in the caption provided by the youtuber, we modify the caption according to what the person has actually spoken, and then save the changes, subsequently moving to the next clip. We repeat this for all the clips of the speaker, which are around 800 on average per speaker.
+            <br>
+            <br>
+            <br>
+            <div>
+              <p>
+                During annotation, we are given a short video clip of the speaker, we start by carefully viewing the
+                video and analyse the mouth movements. If we find errors in the caption provided by the youtuber, we
+                modify
+                the caption according to what the person has actually spoken, and then save the changes, subsequently
+                moving
+                to the next clip. We repeat this for all the clips of the speaker, which are around 800 on average per
+                speaker.
+              </p>
+            </div>
           </div>
           <!--/ Re-rendering. -->
 
         </div>
       </div>
-      <!--/ Animation. -->
-      <br>
       <br>
       <!-- Animation. -->
       <div class="columns is-centered">
@@ -330,8 +337,20 @@
               <source src="./static/videos/replay.mp4" type="video/mp4">
             </video> -->
             <img src="./static/images/data_variation_plotly2.png" class="interpolation-image"
-            alt="Interpolate start reference image."
-            style="border: 2px solid #ccc; border-radius: 10px; padding: 10px;" />
+              alt="Interpolate start reference image."
+              style="border: 2px solid #ccc; border-radius: 10px; padding: 10px;" />
+            <br>
+            <br>
+            <div class="content has-text-centered">
+              <p>
+                We investigate the effect of the amount of data on the level
+                of personalization. For this, we fine-tuned the model with
+                varying amounts of data. We observe that full fine-tuning the
+                model on just ten minutes and twenty minutes of the data gives
+                38.3% and 65.7% of improvement as compared to the model
+                trained on 40 minutes of the data.
+              </p>
+            </div>
           </div>
           <!--/ Re-rendering. -->
 
@@ -353,6 +372,11 @@
             <img src="./static/images/dataset_boundary.drawio.png" class="interpolation-image"
               alt="Interpolate start reference image."
               style="border: 2px solid #ccc; border-radius: 10px; padding: 10px;" />
+          </div>
+          <div class="content has-text-centered">
+            <p>
+              Data Visualization of 5 speakers each for both deaf and accented, in the accented order of difficulty
+            </p>
           </div>
           <!--/ Re-rendering. -->
 
@@ -431,6 +455,7 @@
               Please remember to remove the analytics code included in the header of the website which
               you do not want on your website.
             </p>
+            <p>&copy; 2024 DeafVSR. <a href="legal-disclaimer.html">Legal Disclaimer</a>.</p>
           </div>
         </div>
       </div>
