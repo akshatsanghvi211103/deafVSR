@@ -334,6 +334,28 @@
           <h2 class="title is-3 has-text-centered">Results</h2>
 
           <!-- Re-rendering. -->
+          <h3 class="title is-4 has-text-centered">Fine-Tuning Experiments</h3>
+          <div class="content has-text-centered">
+            <!-- <video id="replay-video" controls muted preload playsinline width="75%">
+              <source src="./static/videos/replay.mp4" type="video/mp4">
+            </video> -->
+            <img src="./static/images/finetuning_experiments_table_and_architecture.png" class="interpolation-image"
+              alt="Interpolate start reference image."
+              style="border: 2px solid #ccc; border-radius: 10px; padding: 10px;" />
+            <br>
+            <br>
+            <div class="content has-text-centered">
+              <p>
+                We identify the important parts of the Auto-AVSR architecture, which are crucial for personalization. We
+                follow a systematic approach to choose which layers to finetune, and finally go down till the mid-conv
+                layers of the conformer, being the most parameter efficient. Just 9% of the parameters contributes to
+                50% of the personalization. Also, fine-tuning only the encoder leads to equivalent performance to
+                full model fine-tuning.
+              </p>
+            </div>
+          </div>
+          <br>
+          <!-- Re-rendering. -->
           <h3 class="title is-4 has-text-centered">Amount of Data Variation</h3>
           <div class="content has-text-centered">
             <!-- <video id="replay-video" controls muted preload playsinline width="75%">
