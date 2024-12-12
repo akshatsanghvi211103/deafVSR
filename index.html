@@ -216,10 +216,10 @@
         <source src="./static/videos/teaser.mp4"
                 type="video/mp4">
       </video> -->
-      <h2 class="title is-3 has-text-centered">Framework</h2>
-      <br>
-      <img src="./static/images/banner_website.drawio.png" class="interpolation-image"
-      alt="Interpolate start reference image." />
+        <h2 class="title is-3 has-text-centered">Framework</h2>
+        <br>
+        <img src="./static/images/banner_website.drawio.png" class="interpolation-image"
+          alt="Interpolate start reference image." />
         <h2 class="subtitle has-text-centered">
           <br>
           <span class="dnerf">DeafVSR</span>
@@ -419,19 +419,47 @@
 
           <!-- Re-rendering. -->
           <!-- <h3 class="title is-4 has-text-centered">Visualizations</h3> -->
-          <div class="content has-text-centered">
-            <!-- <video id="replay-video" controls muted preload playsinline width="75%">
-              <source src="./static/videos/replay.mp4" type="video/mp4">
-            </video> -->
-            To be added
-          </div>
-          <div class="content has-text-centered">
-            <p>
-              <!-- Data Visualization of 5 speakers each for both deaf and accented, in the accented order of difficulty -->
-            </p>
-          </div>
           <!--/ Re-rendering. -->
-
+          <div class="content">
+            <table border="1" style="border-collapse: collapse; width: 100%;">
+              <thead>
+                <tr>
+                  <th>Ground Truth</th>
+                  <th>Pre-trained Model</th>
+                  <th>Fine-tuned Model</th>
+                  <th>Comments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>WHAT IS YOUR FAVOURITE FAMILY VACATION</td>
+                  <td>WHAT IS YOUR FAVOURITE FAMILY INVITATION</td>
+                  <td>WHAT IS YOUR FAVOURITE FAMILY VACATION</td>
+                  <td>Similar sounding words disparity fixed</td>
+                </tr>
+                <tr>
+                  <td>THERE'S A WHITE DOT IT'S HARD TO SEE BECAUSE YOU CAN'T REALLY CAN SEE INSIDE OF MY MOUTH</td>
+                  <td>IT'S LIKE A WAX SOCK IT'S HARD TO SEE BECAUSE OBVIOUSLY YOU CAN'T SEE INSIDE BUT BOTH</td>
+                  <td>IT'S A WHITE DOG IT'S HARD TO SEE BECAUSE OF THE INSIDE OF MY MOUTH</td>
+                  <td>Long sentence, many words fixed</td>
+                </tr>
+                <tr>
+                  <td>SO I THOUGHT IT WOULD BE GREAT TO SHOW YOU GUYS EVERYTHING I EAT IN A DAY</td>
+                  <td>SO WE'RE TRYING TO SHOW YOU GUYS WHY</td>
+                  <td>SO I THOUGHT I WOULD BE ABLE TO SHOW YOU GUYS WHAT I EAT IN A DAY</td>
+                  <td>Sentence cut off fixed, learnt how and when the speaker pauses</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="content has-text-centered">
+              <p>
+                Examples from deaf speakers. We can see that there are many cases where the pre-trained model fails on a
+                clip, giving sometimes similar outputs (similar articulation), but after finetuning it becomes much clearer,
+                meaning that the model has adapted to the style of the speaker. However, we can still see that the
+                finetuning is not perfect and there are many mistakes
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <!-- Animation. -->
